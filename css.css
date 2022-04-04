@@ -1,0 +1,77 @@
+body{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto auto 70px;
+    grid-template-areas: 
+    "nav nav"
+    "header header"
+    "main aside"
+    "section figure"
+    "footer footer";
+}
+
+nav{
+    grid-area: nav; 
+}
+
+/*Ger header platsen header i griden*/
+header{
+    grid-area: header;
+}
+
+/*Ger main platsen main i griden*/
+main{
+    grid-area: main;
+}
+
+/*Ger aside platsen aside i griden*/
+aside{
+    grid-area: aside;
+}
+
+section{
+    grid-area: section;
+}
+
+figure{
+    grid-area: figure;
+}
+
+/*Ger footer platsen footer i griden*/
+footer{
+    grid-area: footer;
+}
+
+.navbar {
+    font-size: 35px;
+    background: #2f1fbd;
+    padding-bottom: 10px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Klasselektor som stylear länkarna i menyn */
+.nav-links {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    background: #2f1fbd;
+}
+/* Klasselektor som stylear listan i menyn */
+.main-nav li {
+    text-align: center;
+    margin: 10px auto;
+    background: #2f1fbd;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: flex;
+    background: #2f1fbd;
+}
