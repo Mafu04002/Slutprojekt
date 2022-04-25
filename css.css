@@ -1,14 +1,13 @@
 body{
     display: grid;
-    grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px auto auto 70px;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
     "nav nav"
     "header header"
     "main aside"
     "section figure"
-    "footer footer";
+    "footer footer"
 }
 
 nav{
@@ -41,12 +40,15 @@ figure{
 /*Ger footer platsen footer i griden*/
 footer{
     grid-area: footer;
+    background-color: #2f1fbd;
+    width: 100vw;
+    padding-bottom: 15px;
 }
 
 .navbar {
     font-size: 35px;
     background: #2f1fbd;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     height: 70px;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +68,7 @@ footer{
 /* Klasselektor som stylear listan i menyn */
 .main-nav li {
     text-align: center;
-    margin: 10px auto;
+    margin: auto;
     background: #2f1fbd;
 }
 
@@ -74,4 +76,27 @@ footer{
     list-style-type: none;
     display: flex;
     background: #2f1fbd;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p, h1{
+    text-align: center;
+}
+.footer{
+    text-align: left;
+    color: white;
+    margin-left: 1vw;
+    font-size: 1.3em;¨
+}
+#img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
