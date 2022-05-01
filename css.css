@@ -1,13 +1,14 @@
 body{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
-    "nav nav"
-    "header header"
-    "main aside"
-    "section figure"
-    "footer footer"
+    "nav nav nav"
+    "header header header"
+    "main main aside"
+    "section article figure"
+    "footer footer footer"
 }
 
 nav{
@@ -37,6 +38,10 @@ figure{
     grid-area: figure;
 }
 
+article{
+    grid-area: article;
+}
+
 /*Ger footer platsen footer i griden*/
 footer{
     grid-area: footer;
@@ -45,12 +50,12 @@ footer{
     padding-bottom: 15px;
 }
 
-.navbar {
-    font-size: 35px;
+.navbar{
+    font-size: 32px;
     background: #2f1fbd;
-    padding-bottom: 15px;
     height: 70px;
-    justify-content: space-between;
+    padding-bottom: 10px;
+    justify-content:center;
     align-items: center;
     overflow: hidden;
     position: fixed;
@@ -62,7 +67,6 @@ footer{
 .nav-links {
     text-decoration: none;
     color: white;
-    opacity: 0.8;
     background: #2f1fbd;
 }
 /* Klasselektor som stylear listan i menyn */
@@ -82,21 +86,146 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
+    border: 3px solid black;
 }
 
-p, h1{
+p, h1, h3, h2{
     text-align: center;
 }
 .footer{
     text-align: left;
     color: white;
     margin-left: 1vw;
-    font-size: 1.3em;¨
+    font-size: 1.3em;
 }
+
 #img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+}
+table, th, td{
+    margin-left: auto;
+    margin-right: auto; 
+    border: 1px solid black;
+}
+
+table{
+    border-radius: 7px 7px 7px 7px;
+    border-spacing: 0px;  
+    border: 3px solid black;
+}
+
+#table{
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    border-radius: 7px 7px 7px 7px;
+}
+
+tr:nth-child(even) {
+    background-color: #0ea55e;
+}
+
+tr:nth-child(odd) {
+    background-color: #6462b3;
+}
+
+.margin{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0%;
+}
+
+.bakgrund{
+    background-color: #bbb8d1ab;
+    margin: 0;
+}
+
+#video{
+    width: 50%;
+    height: 35%;
+    display: block;
+    margin: auto;
+}
+
+#nyteknik{
+    height: 70vh;
+    width: 90% ;   
+    margin-top: 0%;
+}
+
+.center{
+    padding-right: 20%;
+}   
+
+.nav2{
+    background: rgb(103, 95, 216);
+    text-align: center;
+    margin-top: -4px;
+    list-style-type: none;
+    position: fixed;
+    width: 100%;
+}
+
+.nav2 li{
+    display: inline-block;
+}
+
+.nav2 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 2vh;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 170px;
+}
+
+#kontakt{
+    padding-left: 2%;
+}
+
+#musk{
+    padding-left: 100px;
+}
+
+#tesla{
+    height: 75vh;
+    width: 100%;
+}
+
+#fabrik{
+    width: 95%;
+    height: 90%;
+}
+
+#spacex{
+    padding-top: 4%;
+    height: 50%;
+}
+
+#spacextext{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+a:link, a:visited{
+    color: white;
+}
+
+a:hover, a:active{
+    color:aqua;
+}
+
+#nyhet{
+    text-align: center;
+    padding-left: 35%;
+}
+
+#contact{
+    text-align: left;
 }
