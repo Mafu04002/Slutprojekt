@@ -8,7 +8,7 @@ body{
     "header header header"
     "main main aside"
     "section article figure"
-    "footer footer footer"
+    "footer footer footer";
 }
 
 nav{
@@ -51,12 +51,11 @@ footer{
 }
 
 .navbar{
-    font-size: 32px;
+    font-size: 25px;
     background: #2f1fbd;
     height: 70px;
     padding-bottom: 10px;
-    justify-content:center;
-    align-items: center;
+    text-align: center;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -64,21 +63,24 @@ footer{
 }
 
 /* Klasselektor som stylear länkarna i menyn */
-.nav-links {
+.navbar a{
     text-decoration: none;
     color: white;
     background: #2f1fbd;
+    text-align: center;
+    padding: 200px;
 }
 /* Klasselektor som stylear listan i menyn */
-.main-nav li {
+.navbar li {
     text-align: center;
     margin: auto;
+    display: inline-block;
     background: #2f1fbd;
 }
 
-.main-nav {
+.navbar ul {
     list-style-type: none;
-    display: flex;
+    display: inline-block;
     background: #2f1fbd;
 }
 
@@ -164,7 +166,7 @@ tr:nth-child(odd) {
 .nav2{
     background: rgb(103, 95, 216);
     text-align: center;
-    margin-top: -4px;
+    margin-top: -2.3vh;
     list-style-type: none;
     position: fixed;
     width: 100%;
@@ -179,10 +181,10 @@ tr:nth-child(odd) {
     color: white;
     display: block;
     padding: 2vh;
-    font-size: 2em;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin-left: 170px;
+    margin-left: 60%;
 }
 
 #kontakt{
@@ -194,7 +196,7 @@ tr:nth-child(odd) {
 }
 
 #tesla{
-    height: 75vh;
+    height: 50vh;
     width: 100%;
 }
 
@@ -204,7 +206,7 @@ tr:nth-child(odd) {
 }
 
 #spacex{
-    padding-top: 4%;
+    padding-top: 3%;
     height: 50%;
 }
 
@@ -214,11 +216,11 @@ tr:nth-child(odd) {
 }
 
 a:link, a:visited{
-    color: white;
+    color: black;
 }
 
 a:hover, a:active{
-    color:aqua;
+    color: aqua;
 }
 
 #nyhet{
@@ -228,4 +230,22 @@ a:hover, a:active{
 
 #contact{
     text-align: left;
+}
+
+@media (max-width:700px){
+    body{
+        display: block;
+        grid-template-columns: 1fr;
+        grid-gap:10px;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "aside"
+    "section"
+    "article" 
+    "figure"
+    "footer"
+    }
 }
