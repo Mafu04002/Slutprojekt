@@ -46,42 +46,43 @@ article{
 footer{
     grid-area: footer;
     background-color: #2f1fbd;
-    width: 100vw;
+    width: 100%;
     padding-bottom: 15px;
 }
 
 .navbar{
-    font-size: 25px;
+    font-size: 1.5em;
     background: #2f1fbd;
-    height: 70px;
-    padding-bottom: 10px;
-    text-align: center;
+    height: 80px;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Klasselektor som stylear länkarna i menyn */
 .navbar a{
     text-decoration: none;
-    color: white;
-    background: #2f1fbd;
     text-align: center;
-    padding: 200px;
+    margin: auto;
+    color: white;
+    background: #2f1fbd;  
 }
+
 /* Klasselektor som stylear listan i menyn */
 .navbar li {
     text-align: center;
     margin: auto;
-    display: inline-block;
     background: #2f1fbd;
 }
 
 .navbar ul {
     list-style-type: none;
-    display: inline-block;
+    display: flex;
     background: #2f1fbd;
+    width: 100%;
 }
 
 img{
@@ -98,7 +99,7 @@ p, h1, h3, h2{
 .footer{
     text-align: left;
     color: white;
-    margin-left: 1vw;
+    margin-left: 1%;
     font-size: 1.3em;
 }
 
@@ -106,7 +107,7 @@ p, h1, h3, h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 99.5%;
 }
 table, th, td{
     margin-left: auto;
@@ -154,14 +155,10 @@ tr:nth-child(odd) {
 }
 
 #nyteknik{
-    height: 70vh;
-    width: 90% ;   
-    margin-top: 0%;
+    height: 50%;
+    width: 70% ;   
+    border: none;
 }
-
-.center{
-    padding-right: 20%;
-}   
 
 .nav2{
     background: rgb(103, 95, 216);
@@ -180,7 +177,6 @@ tr:nth-child(odd) {
     text-decoration: none;
     color: white;
     display: block;
-    padding: 2vh;
     font-size: 30px;
     font-weight: bold;
     text-align: center;
@@ -197,17 +193,12 @@ tr:nth-child(odd) {
 
 #tesla{
     height: 50vh;
-    width: 100%;
+    width: 99.5%;
 }
 
 #fabrik{
     width: 95%;
     height: 90%;
-}
-
-#spacex{
-    padding-top: 3%;
-    height: 50%;
 }
 
 #spacextext{
@@ -225,7 +216,7 @@ a:hover, a:active{
 
 #nyhet{
     text-align: center;
-    padding-left: 35%;
+    margin-left: 35%;
 }
 
 #contact{
@@ -236,7 +227,7 @@ a:hover, a:active{
     body{
         display: block;
         grid-template-columns: 1fr;
-        grid-gap:10px;
+        grid-gap: 10%;
         grid-template-rows: auto auto auto auto auto auto auto auto;
         grid-template-areas: 
     "nav"
