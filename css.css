@@ -1,8 +1,9 @@
+/*Skapar gridlayouten*/
 body{
     display: grid;
     grid-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: 80px auto auto auto auto;
     grid-template-areas: 
     "nav nav nav"
     "header header header"
@@ -11,21 +12,19 @@ body{
     "footer footer footer";
 }
 
+/*Ger de olika delarna i griden sina platser*/
 nav{
     grid-area: nav; 
 }
 
-/*Ger header platsen header i griden*/
 header{
     grid-area: header;
 }
 
-/*Ger main platsen main i griden*/
 main{
     grid-area: main;
 }
 
-/*Ger aside platsen aside i griden*/
 aside{
     grid-area: aside;
 }
@@ -42,7 +41,7 @@ article{
     grid-area: article;
 }
 
-/*Ger footer platsen footer i griden*/
+/*Ger footern sitt utseende*/
 footer{
     grid-area: footer;
     background-color: #2f1fbd;
@@ -50,41 +49,57 @@ footer{
     padding-bottom: 15px;
 }
 
+/*Ger navbaren sitt utseende*/
 .navbar{
-    font-size: 1.5em;
     background: #2f1fbd;
-    height: 80px;
+    text-align: center;
     overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Klasselektor som stylear länkarna i menyn */
+/*Bestämmer hur länkarna i navbaren ser ut*/
 .navbar a{
     text-decoration: none;
     text-align: center;
-    margin: auto;
-    color: white;
+    color: black;
     background: #2f1fbd;  
+    font-size: 1.5em;
+    padding: 10px 30px;
+    display: block;
 }
 
-/* Klasselektor som stylear listan i menyn */
-.navbar li {
-    text-align: center;
-    margin: auto;
-    background: #2f1fbd;
+.navbar li{
+    display: inline-block;
 }
 
-.navbar ul {
+.navbar ul{
+    display: inline-block;
     list-style-type: none;
-    display: flex;
-    background: #2f1fbd;
-    width: 100%;
 }
 
+/*Ger den sitt utseende*/
+.nav2{
+    background: rgb(103, 95, 216);
+    text-align: center;
+    height: 80px;
+    margin-top: -80px;
+}
+
+.nav2 li{
+    display: inline-block;
+}
+
+/*Ger länkarna i den andra naven sitt utseende*/
+.nav2 a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 100px;
+}
+
+/*Gör att bilder får rätt storlek, plats och ger dem en kant*/
 img{
     display: block;
     margin-left: auto;
@@ -93,9 +108,12 @@ img{
     border: 3px solid black;
 }
 
+/*Centrerar all text*/
 p, h1, h3, h2{
     text-align: center;
 }
+
+/*Ger texten i footern sitt utseende*/
 .footer{
     text-align: left;
     color: white;
@@ -103,24 +121,30 @@ p, h1, h3, h2{
     font-size: 1.3em;
 }
 
+/*Bestämmer layout på bilderna längst upp*/
 #img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -80px;
     width: 99.5%;
 }
+
+/*Centrerar tabellen och ger den sin kant*/
 table, th, td{
     margin-left: auto;
     margin-right: auto; 
     border: 1px solid black;
 }
 
+/*Bestämmer bordern på tabellen*/
 table{
     border-radius: 7px 7px 7px 7px;
     border-spacing: 0px;  
     border: 3px solid black;
 }
 
+/*Bestämmer förhållanden på tabellen, rundar hörnen och centrerar texten i den*/
 #table{
     width: 90%;
     height: 70%;
@@ -128,25 +152,30 @@ table{
     border-radius: 7px 7px 7px 7px;
 }
 
+/*Gör varannan rad i tabellen grön*/
 tr:nth-child(even) {
     background-color: #0ea55e;
 }
 
+/*Gör varannan rad i tabellen lila*/
 tr:nth-child(odd) {
     background-color: #6462b3;
 }
 
+/*Skapar en klass för att lägga till margin*/
 .margin{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 0%;
 }
 
+/*Ger bakgrundsfärg och ställer margin till 0*/
 .bakgrund{
     background-color: #bbb8d1ab;
     margin: 0;
 }
 
+/*Bestämmer förhållandet på videon*/
 #video{
     width: 50%;
     height: 35%;
@@ -154,89 +183,107 @@ tr:nth-child(odd) {
     margin: auto;
 }
 
+/*Ger bilden under nyteknik sin storlek och ingen border*/
 #nyteknik{
     height: 50%;
     width: 70% ;   
     border: none;
 }
 
-.nav2{
-    background: rgb(103, 95, 216);
-    text-align: center;
-    margin-top: -2.3vh;
-    list-style-type: none;
-    position: fixed;
-    width: 100%;
-}
-
-.nav2 li{
-    display: inline-block;
-}
-
-.nav2 a{
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 60%;
-}
-
+/*Lägger padding på headern i kontakt*/
 #kontakt{
     padding-left: 2%;
 }
 
-#musk{
-    padding-left: 100px;
-}
-
+/*Bestämmer förhållandet på tesla-bilden*/
 #tesla{
     height: 50vh;
     width: 99.5%;
+    margin-top: -20px;
 }
 
+/*Ger bilden på teslas fabrik sin storlek*/
 #fabrik{
     width: 95%;
     height: 90%;
 }
 
+/*Ger texten i spaceX margin på sidorna*/
 #spacextext{
     padding-left: 20%;
     padding-right: 20%;
 }
 
+/*Gör länkar och besökta länkar svarta*/
 a:link, a:visited{
     color: black;
 }
 
-a:hover, a:active{
+/*Gör att länkar som är aktiva, fokuseras med tangentbord eller har musen över sig blir aqua*/
+a:hover, a:active, a:focus{
     color: aqua;
 }
 
+/*Gör länken på startsidan centrerad och lägger margin*/
 #nyhet{
     text-align: center;
-    margin-left: 35%;
+    margin-left: 45%;
 }
 
+/*Vänsterjusterar rubriken på kontaktsidan*/
 #contact{
     text-align: left;
 }
 
+/*Ger texten på landningssidan sin position och storlek*/
+#text {
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Ändra gridens utformning när skärmen som används är mindre än 700px. Ändrar även navbaren och bilder för att dessa ska vara responsiva.*/
 @media (max-width:700px){
     body{
         display: block;
         grid-template-columns: 1fr;
         grid-gap: 10%;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-rows: 80px auto auto auto auto auto auto auto;
         grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "aside"
-    "section"
-    "article" 
-    "figure"
-    "footer"
+        "nav"
+        "header"
+        "main"
+        "aside"
+        "section"
+        "article" 
+        "figure"
+        "footer"
+    }
+
+    .navbar{
+        width: 100%;
+    }
+    
+    .navbar a{
+        font-size: 1.3em;
+        padding: 10px 10px;
+    }
+
+    .nav2{
+        background: rgb(103, 95, 216);
+        text-align: center;
+        height: 80px;
+        margin-top: 0px;
+    }
+    
+    .nav2 a{
+        font-size: 24px;
+        padding: 29px 10px;
+    }
+
+    #img{
+        margin-top: 0px;
     }
 }
