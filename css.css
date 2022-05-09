@@ -4,6 +4,7 @@ body{
     grid-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 80px auto auto auto auto;
+    font-family: minFont;
     grid-template-areas: 
     "nav nav nav"
     "header header header"
@@ -210,8 +211,9 @@ tr:nth-child(odd) {
 
 /*Ger texten i spaceX margin på sidorna*/
 #spacextext{
-    padding-left: 20%;
-    padding-right: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 
 /*Gör länkar och besökta länkar svarta*/
@@ -242,6 +244,12 @@ a:hover, a:active, a:focus{
     margin-bottom: 25%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*Länkar in fonten*/
+@font-face {
+    font-family: minFont;
+    src: url(roboto.woff);
 }
 
 /*Ändra gridens utformning när skärmen som används är mindre än 700px. Ändrar även navbaren och bilder för att dessa ska vara responsiva.*/
