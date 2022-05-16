@@ -1,14 +1,15 @@
 /*Skapar gridlayouten*/
 body{
+    background-color: #bbb8d1ab;
+    margin: 0;
     display: grid;
-    grid-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 80px auto auto auto auto;
     font-family: minFont;
     grid-template-areas: 
     "nav nav nav"
     "header header header"
-    "main main aside"
+    "aside aside main"
     "section article figure"
     "footer footer footer";
 }
@@ -51,14 +52,14 @@ footer{
 }
 
 /*Ger navbaren sitt utseende*/
-.navbar{
+nav{
     background: #2f1fbd;
     text-align: center;
     overflow: hidden;
 }
 
 /*Bestämmer hur länkarna i navbaren ser ut*/
-.navbar a{
+nav a{
     text-decoration: none;
     text-align: center;
     color: black;
@@ -68,13 +69,8 @@ footer{
     display: block;
 }
 
-.navbar li{
+nav li{
     display: inline-block;
-}
-
-.navbar ul{
-    display: inline-block;
-    list-style-type: none;
 }
 
 /*Ger den sitt utseende*/
@@ -82,7 +78,6 @@ footer{
     background: rgb(103, 95, 216);
     text-align: center;
     height: 80px;
-    margin-top: -80px;
 }
 
 .nav2 li{
@@ -94,7 +89,7 @@ footer{
     text-decoration: none;
     color: black;
     display: block;
-    font-size: 30px;
+    font-size: 3ex;
     font-weight: bold;
     text-align: center;
     padding: 20px 100px;
@@ -110,7 +105,7 @@ img{
 }
 
 /*Centrerar all text*/
-p, h1, h3, h2{
+p, h1, h2{
     text-align: center;
 }
 
@@ -127,7 +122,6 @@ p, h1, h3, h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -80px;
     width: 99.5%;
 }
 
@@ -143,14 +137,9 @@ table{
     border-radius: 7px 7px 7px 7px;
     border-spacing: 0px;  
     border: 3px solid black;
-}
-
-/*Bestämmer förhållanden på tabellen, rundar hörnen och centrerar texten i den*/
-#table{
     width: 90%;
     height: 70%;
     text-align: center;
-    border-radius: 7px 7px 7px 7px;
 }
 
 /*Gör varannan rad i tabellen grön*/
@@ -170,14 +159,8 @@ tr:nth-child(odd) {
     margin-top: 0%;
 }
 
-/*Ger bakgrundsfärg och ställer margin till 0*/
-.bakgrund{
-    background-color: #bbb8d1ab;
-    margin: 0;
-}
-
 /*Bestämmer förhållandet på videon*/
-#video{
+header > iframe{
     width: 50%;
     height: 35%;
     display: block;
@@ -200,13 +183,6 @@ tr:nth-child(odd) {
 #tesla{
     height: 50vh;
     width: 99.5%;
-    margin-top: -20px;
-}
-
-/*Ger bilden på teslas fabrik sin storlek*/
-#fabrik{
-    width: 95%;
-    height: 90%;
 }
 
 /*Ger texten i spaceX margin på sidorna*/
@@ -216,14 +192,26 @@ tr:nth-child(odd) {
     margin-bottom: 5%;
 }
 
-/*Gör länkar och besökta länkar svarta*/
-a:link, a:visited{
+/*Gör länkar svarta*/
+a:link{
     color: black;
 }
 
-/*Gör att länkar som är aktiva, fokuseras med tangentbord eller har musen över sig blir aqua*/
-a:hover, a:active, a:focus{
-    color: aqua;
+a:visited{
+    color: rgb(75, 231, 231);
+}
+
+a:hover{
+    font-size: 30px;
+}
+
+a:focus{
+    font-size: 30px;
+}
+
+/*Gör att länkar som är aktiva blir aqua*/
+a:active{
+    color: hsl(193, 63%, 57%);
 }
 
 /*Gör länken på startsidan centrerad och lägger margin*/
@@ -233,7 +221,7 @@ a:hover, a:active, a:focus{
 }
 
 /*Vänsterjusterar rubriken på kontaktsidan*/
-#contact{
+.contact{
     text-align: left;
 }
 
@@ -245,6 +233,15 @@ a:hover, a:active, a:focus{
     margin-left: auto;
     margin-right: auto;
 }
+
+#textarea{
+    width: 350px;
+}
+
+.gridgap{
+    grid-gap: 80px;
+}
+
 
 /*Länkar in fonten*/
 @font-face {

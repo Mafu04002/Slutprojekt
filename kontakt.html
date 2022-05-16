@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css.css" rel="stylesheet">
     </head>
-    <body class="bakgrund">
-        <nav class="navbar">
+    <body>
+        <nav>
             <ul>
                 <li><a href="index.html">Framtidens Teknik</a></li>
                 <li><a href="tidning.html">Ny Teknik</a></li>               
@@ -16,17 +16,43 @@
         </nav>
         <header id="kontakt">
             <!--Ger en rubrik till kontaktsidan-->
-            <h3 id="contact">Kontaka oss nedan</h3>
+            <h1 class="contact">Kontaka oss nedan</h1>
             <!--Skapar ett formulär-->
-            <form>
-                <!--Skapar ett textfält för namn med placeholdern namn-->
-                <input type="text" name="namn" placeholder="Namn"><br><br>
-                <!--Skapar ett fält för email med size 30 med placeholdern email-->
-                <input type="email" name="email" size="30" placeholder="Email"><br><br>
-                <!--Skapar en textruta och ger den sin storlek med placeholdern meddelande-->
-                <textarea rows="15" cols="55" maxlength="350" placeholder="Meddelande"></textarea><br><br>
-                <!--Skapar en knapp för att skicka formuläret-->
-                <button type='submit'>Skicka</button>	
+            <form action="destination.html" method="post">
+                <label for="name">Namn</label><br>
+                <input type="text" id="name" name="namn" placeholder="Namn" required><br><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Email"><br><br>
+                <label for="password">Lösenord</label><br>
+                <input type="password" id="password" name="password" placeholder="Lösenord"><br>
+                <label id="checkbox">Hade du kunnat tänka dig besöka sidan igen? <br> Ja/Nej</label>
+                <input id="checkbox" type="checkbox" name="Ja" checked>
+                <input id="checkbox" type="checkbox" name="Nej"><br><br>
+                <fieldset>
+                    <legend>Hur betygsätter du hemsidan 1-3?</legend>
+                    <p>
+                        <input type="radio" name="betyg" value="1" id="1">
+                        <label for="1">1</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="betyg" value="2" id="2">
+                        <label for="2">2</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="betyg" value="3" id="3">
+                        <label for="3">3</label>
+                    </p>
+                </fieldset>
+                <label for="tidning">Kommer du teckna tidningen?</label><br>    
+                <select id="tidning" name="tidning">
+                    <option value="Ja">Ja</option>
+                    <option value="Nej">Nej</option>
+                </select><br><br>  
+                <label for="number">Betygsätt sidans design från 1 till 5</label>
+                <input type="number" id="number" name="siffra" min="1" max="5"><br>
+                <label for="textarea">Meddelande</label><br>                                                         
+                <textarea id="textarea" maxlength="350" placeholder="Meddelande"></textarea><br><br>
+                <button type='submit'>Skicka</button><br><br>
             </form>
         </header>
         <footer>
